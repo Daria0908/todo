@@ -1,4 +1,5 @@
 import { Component } from "react";
+import "./TaskInput.scss";
 
 export default class TaskInput extends Component {
   constructor(props) {
@@ -28,9 +29,11 @@ export default class TaskInput extends Component {
   render() {
     const { input } = this.state;
     return (
-      <div>
-        <input onKeyDown={this.handleEnter} onChange={this.inputChange} value={input}></input>
-        <button onClick={this.addTask}>ADD</button>
+      <div className="taskInput">
+        <input className="input" onKeyDown={this.handleEnter} onChange={this.inputChange} value={input}></input>
+        <button className="taskAdd" onClick={this.addTask}>
+          Добавить задачу
+        </button>
       </div>
     );
   }

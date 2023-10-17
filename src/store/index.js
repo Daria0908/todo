@@ -8,28 +8,7 @@ class Store {
       sortedTask: computed,
     });
   }
-  tasks = [
-    {
-      id: 0,
-      title: "string",
-      done: false,
-    },
-    {
-      id: 1,
-      title: "string1",
-      done: true,
-    },
-    {
-      id: 2,
-      title: "string2",
-      done: false,
-    },
-    {
-      id: 3,
-      title: "string3",
-      done: false,
-    },
-  ];
+  tasks = [];
 
   setTask(payload) {
     this.tasks = payload;
@@ -53,10 +32,10 @@ class Store {
     this.setTask(tasks);
   }
 
-  doneTask(id) {
+  handleTask(id) {
     let tasks = this.tasks;
-    const index = tasks.map((task) => task.id).indexOf(id);
-    tasks[index].done = true;
+    const index = tasks?.map((task) => task.id).indexOf(id);
+    tasks[index].done = !tasks[index].done;
     this.setTask(tasks);
   }
 

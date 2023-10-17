@@ -1,0 +1,11 @@
+.task {
+  display: grid;
+  grid-template-columns: 1fr 50% 1fr;
+  align-items: center;
+  text-align: left;
+
+  &__done {
+    text-align: right;
+    margin-right: 1em;
+  }
+}
