@@ -7,5 +7,10 @@
   &__done {
     text-align: right;
     margin-right: 1em;
+    cursor: pointer
+  }
+
+  &__delete {
+    cursor: pointer
   }
 }
